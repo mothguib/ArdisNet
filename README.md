@@ -12,7 +12,6 @@ More information about this dataset can be found [here](https://ardisdataset.git
 
 *ArdisNet* comes with a set of classes and functions in the form of the package `ardis`, which allows the user to run ArdisNet straightforwardly. You do not have to be a deep learning expert to get started.
 
-
 ## Getting started
 
 First, import the needed structures to load the ARDIS data, ArdisNet and its trainer:
@@ -28,12 +27,15 @@ from ardis import datapcr
 from ardis.metrics import accuracy
 ```
 
+    Using TensorFlow backend.
+
+
 ### Global settings: paths, constants, ...
 
 
 ```python
 # Number of ensemble networks
-nnets = 15
+nnets = 30
 
 # Number of epochs
 epochs = 30
@@ -94,7 +96,7 @@ y_train.shape
 ### Training and prediction
 
 
-An ensemble of 15 CNNs is trained, in the ensemble methods' perspective , to obtain better predctive performance.
+An ensemble of 30 CNNs is trained, in the perspective of ensemble methods, to obtain better prediction performance.
 
 
 ```python
@@ -119,36 +121,66 @@ for i in range(nnets):
     print("CNN %d: Test accuracy = %f" % (i + 1, acc))
 ```
 
-    CNN 1: Epochs=30, Train accuracy=0.98892, Validation accuracy=0.99242
-    CNN 1: Test accuracy = 0.997000
-    CNN 2: Epochs=30, Train accuracy=0.98414, Validation accuracy=0.99697
-    CNN 2: Test accuracy = 0.990000
-    CNN 3: Epochs=30, Train accuracy=0.98945, Validation accuracy=0.99091
-    CNN 3: Test accuracy = 0.991000
-    CNN 4: Epochs=30, Train accuracy=0.98639, Validation accuracy=0.99848
-    CNN 4: Test accuracy = 0.991000
-    CNN 5: Epochs=30, Train accuracy=0.98758, Validation accuracy=0.99697
+    CNN 1: Epochs=30, Train accuracy=0.98809, Validation accuracy=0.99091
+    CNN 1: Test accuracy = 0.991000
+    CNN 2: Epochs=30, Train accuracy=0.98758, Validation accuracy=1.00000
+    CNN 2: Test accuracy = 0.994000
+    CNN 3: Epochs=30, Train accuracy=0.98726, Validation accuracy=1.00000
+    CNN 3: Test accuracy = 0.989000
+    CNN 4: Epochs=30, Train accuracy=0.98604, Validation accuracy=0.99091
+    CNN 4: Test accuracy = 0.995000
+    CNN 5: Epochs=30, Train accuracy=0.99113, Validation accuracy=0.99242
     CNN 5: Test accuracy = 0.994000
-    CNN 6: Epochs=30, Train accuracy=0.98485, Validation accuracy=1.00000
-    CNN 6: Test accuracy = 0.994000
-    CNN 7: Epochs=30, Train accuracy=0.98553, Validation accuracy=0.99545
-    CNN 7: Test accuracy = 0.993000
-    CNN 8: Epochs=30, Train accuracy=0.98843, Validation accuracy=0.99545
-    CNN 8: Test accuracy = 0.989000
-    CNN 9: Epochs=30, Train accuracy=0.98690, Validation accuracy=0.99242
-    CNN 9: Test accuracy = 0.994000
-    CNN 10: Epochs=30, Train accuracy=0.98499, Validation accuracy=1.00000
-    CNN 10: Test accuracy = 0.997000
-    CNN 11: Epochs=30, Train accuracy=0.98451, Validation accuracy=1.00000
-    CNN 11: Test accuracy = 0.993000
-    CNN 12: Epochs=30, Train accuracy=0.98438, Validation accuracy=0.99394
-    CNN 12: Test accuracy = 0.992000
-    CNN 13: Epochs=30, Train accuracy=0.98860, Validation accuracy=0.99545
-    CNN 13: Test accuracy = 0.992000
-    CNN 14: Epochs=30, Train accuracy=0.98553, Validation accuracy=0.99848
-    CNN 14: Test accuracy = 0.994000
-    CNN 15: Epochs=30, Train accuracy=0.99013, Validation accuracy=0.99394
+    CNN 6: Epochs=30, Train accuracy=0.98570, Validation accuracy=0.99697
+    CNN 6: Test accuracy = 0.988000
+    CNN 7: Epochs=30, Train accuracy=0.98772, Validation accuracy=0.99394
+    CNN 7: Test accuracy = 0.992000
+    CNN 8: Epochs=30, Train accuracy=0.98692, Validation accuracy=0.99697
+    CNN 8: Test accuracy = 0.993000
+    CNN 9: Epochs=30, Train accuracy=0.98604, Validation accuracy=0.99848
+    CNN 9: Test accuracy = 0.997000
+    CNN 10: Epochs=30, Train accuracy=0.98675, Validation accuracy=0.99848
+    CNN 10: Test accuracy = 0.992000
+    CNN 11: Epochs=30, Train accuracy=0.98911, Validation accuracy=0.99545
+    CNN 11: Test accuracy = 0.994000
+    CNN 12: Epochs=30, Train accuracy=0.98809, Validation accuracy=0.99545
+    CNN 12: Test accuracy = 0.994000
+    CNN 13: Epochs=30, Train accuracy=0.98622, Validation accuracy=0.99697
+    CNN 13: Test accuracy = 0.993000
+    CNN 14: Epochs=30, Train accuracy=0.98840, Validation accuracy=0.99394
+    CNN 14: Test accuracy = 0.996000
+    CNN 15: Epochs=30, Train accuracy=0.98843, Validation accuracy=0.99545
     CNN 15: Test accuracy = 0.992000
+    CNN 16: Epochs=30, Train accuracy=0.98775, Validation accuracy=0.99545
+    CNN 16: Test accuracy = 0.992000
+    CNN 17: Epochs=30, Train accuracy=0.98760, Validation accuracy=0.99697
+    CNN 17: Test accuracy = 0.995000
+    CNN 18: Epochs=30, Train accuracy=0.98709, Validation accuracy=0.99697
+    CNN 18: Test accuracy = 0.995000
+    CNN 19: Epochs=30, Train accuracy=0.99030, Validation accuracy=0.99394
+    CNN 19: Test accuracy = 0.994000
+    CNN 20: Epochs=30, Train accuracy=0.98811, Validation accuracy=0.99394
+    CNN 20: Test accuracy = 0.987000
+    CNN 21: Epochs=30, Train accuracy=0.98607, Validation accuracy=0.99848
+    CNN 21: Test accuracy = 0.994000
+    CNN 22: Epochs=30, Train accuracy=0.98860, Validation accuracy=0.99091
+    CNN 22: Test accuracy = 0.993000
+    CNN 23: Epochs=30, Train accuracy=0.98434, Validation accuracy=0.99545
+    CNN 23: Test accuracy = 0.997000
+    CNN 24: Epochs=30, Train accuracy=0.98346, Validation accuracy=0.99697
+    CNN 24: Test accuracy = 0.991000
+    CNN 25: Epochs=30, Train accuracy=0.98794, Validation accuracy=0.99394
+    CNN 25: Test accuracy = 0.996000
+    CNN 26: Epochs=30, Train accuracy=0.98843, Validation accuracy=0.99697
+    CNN 26: Test accuracy = 0.996000
+    CNN 27: Epochs=30, Train accuracy=0.98877, Validation accuracy=1.00000
+    CNN 27: Test accuracy = 0.990000
+    CNN 28: Epochs=30, Train accuracy=0.98862, Validation accuracy=0.99545
+    CNN 28: Test accuracy = 0.994000
+    CNN 29: Epochs=30, Train accuracy=0.98707, Validation accuracy=0.99848
+    CNN 29: Test accuracy = 0.995000
+    CNN 30: Epochs=30, Train accuracy=0.98604, Validation accuracy=0.99394
+    CNN 30: Test accuracy = 0.993000
 
 
 ### Ensemble Prediction
