@@ -94,7 +94,7 @@ y_train.shape
 ### Training and prediction
 
 
-An ensemble of 15 CNNs is trained, from the perspective of ensemble methods, to obtain better prediction performance.
+An ensemble of 15 CNNs is trained, in the ensemble methods' perspective , to obtain better predctive performance.
 
 
 ```python
