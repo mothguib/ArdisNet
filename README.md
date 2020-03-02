@@ -4,7 +4,7 @@
 
 ARDIS, for *Arkiv Digital Sweden*, is an image-based handwritten historical digit dataset. This dataset was made up out of 15.000 Swedish church records which were written by different priests with various handwriting styles during the XIXth and XXth centuries. The dataset used here consists of single digits. The digit images have the same format as those of MNIST and USPS.
 
-![digits3.png](attachment:digits3.png)
+![](https://raw.githubusercontent.com/mothguib/ArdisNet/master/misc/digits3.png)
 
 More information about this dataset can be found [here](https://ardisdataset.github.io/ARDIS/).
 
